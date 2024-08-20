@@ -29,6 +29,38 @@
             List of application identifiers that are included in this Marketplace Offer.
             </summary>
         </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.inventoryItemIds">
+            <summary>
+            List of inventory items included into this marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.virtualItemIds">
+            <summary>
+            List of virtual items included into this marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.price">
+            <summary>
+            Price of the marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.status">
+            <summary>
+            Status of the marketplace offer. Possible values are:
+            'on_sale' - when the offer is created by the seller and nobody has tried to purchase it yet
+            'pending' - when there is a blockchain transaction pending. Happens when the offer is purchased
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.tags">
+            <summary>
+            List of the tags for the marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.ownerId">
+            <summary>
+            User identifier of the creator of this marketplace offer. The user who tries to sell the inventory items
+            </summary>
+        </member>
         <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.createdAt">
             <summary>
             The UNIX timestamp representing when the Marketplace Offer was created.
