@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RGNMarketplace</name>
+    </assembly>
+    <members>
+        <member name="T:RGN.Modules.Marketplace.MarketplaceModule">
+            <summary>
+            This module is responsible for markeplace functionality.
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.OpenMarketpace(System.String,RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate)">
+            <summary>
+            Opens the marketplace web page
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.Marketplace.MarketplaceOfferData">
+            <summary>
+            Represents a Marketplace Offer in the Ready Games Network (RGN) with its associated properties.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.id">
+            <summary>
+            Unique identifier for the Marketplace Offer.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.appIds">
+            <summary>
+            List of application identifiers that are included in this Marketplace Offer.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.createdAt">
+            <summary>
+            The UNIX timestamp representing when the Marketplace Offer was created.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            Refer to <see cref="T:RGN.Utility.DateTimeUtility"/> for helper methods.
+            This field is automatically populated by the backend
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.updatedAt">
+            <summary>
+            The UNIX timestamp representing when the Marketplace Offer was last updated.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            Refer to <see cref="T:RGN.Utility.DateTimeUtility"/> for helper methods.
+            This field is automatically populated by the backend
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.createdBy">
+            <summary>
+            Identifier for the user who created the Marketplace Offer.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.updatedBy">
+            <summary>
+            Identifier for the user who last updated the Marketplace Offer.
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.Marketplace.GetGamePassUserDataResponseData">
+            <summary>
+            Represents the response data received when requesting Game Pass user data.
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.Marketplac.GetForCurrentAppResponseData">
+            <summary>
+            Represents the response data received when requesting Game Pass data for the current application.
+            </summary>
+        </member>
+    </members>
+</doc>
