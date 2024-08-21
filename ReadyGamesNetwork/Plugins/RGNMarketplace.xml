@@ -14,6 +14,98 @@
             Opens the marketplace web page
             </summary>
         </member>
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.CreateOfferAsync(System.String,System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Creates an offer in the marketplace.
+            1. Prepares the request with the inventory item ID and price.
+            2. Sends the request to the marketplace backend.
+            3. Returns the details of the created offer if the request is successful.
+            Note: this method requires a valid bearer token and app ID for authentication.
+            </summary>
+            <param name="inventoryItemId">The ID of the virtual item to be offered.</param>
+            <param name="price">The price of the offer.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>The details of the created offer.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the input values are invalid.</exception>
+        </member>
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.UpdateOfferAsync(System.String,System.Double,System.Threading.CancellationToken)">
+            <summary>
+            Updates an offer in the marketplace.
+            1. Validates the input parameters.
+            2. Prepares the request with the offer ID and updated price.
+            3. Sends the request to the marketplace backend to update the offer.
+            4. Returns the details of the updated offer if the request is successful.
+            Note: this method requires a valid bearer token and app ID for authentication.
+            </summary>
+            <param name="offerId">The ID of the offer to be updated.</param>
+            <param name="price">The updated price of the offer.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>The details of the updated offer.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the input values are invalid.</exception>
+        </member>
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.DeleteOfferAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an offer in the marketplace.
+            1. Validates the input parameter.
+            2. Prepares the request with the offer ID to be deleted.
+            3. Sends the request to the marketplace backend to delete the offer.
+            4. Returns the details of the deleted offer if the request is successful.
+            Note: this method requires a valid bearer token and app ID for authentication.
+            </summary>
+            <param name="offerId">The ID of the offer to be deleted.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>The details of the deleted offer.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the input values are invalid.</exception>
+        </member>
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.GetOffersAsync(System.Int32,System.Collections.Generic.List{System.String},System.String,System.Nullable{System.Int64},System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a list of offers from the marketplace.
+            1. Validates the input parameters.
+            2. Prepares the request with optional filtering and ordering parameters.
+            3. Sends the request to the marketplace backend to retrieve the offers.
+            4. Returns a list of retrieved offers along with associated virtual items and inventory items if the request is successful.
+            Note: this method requires a valid app ID for authentication.
+            </summary>
+            <param name="limit">The maximum number of offers to return.</param>
+            <param name="appIds">The app IDs of the virtual items to be retrieved. Optional.</param>
+            <param name="virtualItemId">The ID of the virtual item to be retrieved. Optional.</param>
+            <param name="startAfter">The starting point for the query, to fetch offers after this point. Optional.</param>
+            <param name="orderByDirection">The direction of the order by. Defaults to 'asc'. Optional.</param>
+            <param name="orderByField">The field to order by. Defaults to 'updatedAt'. Optional.
+            The value is the 'updatedAt' timestamp or the 'price.quantity' of the offer.
+            </param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>A list of retrieved offers, along with associated virtual items and inventory items.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the input values are invalid.</exception>
+        </member>
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.GetOfferAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves the details of a specific offer from the marketplace.
+            1. Validates the input parameter.
+            2. Prepares the request with the offer ID to be retrieved.
+            3. Sends the request to the marketplace backend to retrieve the offer.
+            4. Returns the details of the retrieved offer, along with associated virtual items and inventory items if the request is successful.
+            Note: this method requires a valid app ID for authentication.
+            </summary>
+            <param name="offerId">The ID of the offer to be retrieved.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>The details of the retrieved offer, along with associated virtual items and inventory items.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the input values are invalid.</exception>
+        </member>
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.BuyOfferAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Purchases an offer from the marketplace.
+            1. Validates the input parameter.
+            2. Prepares the request with the offer ID to be purchased.
+            3. Sends the request to the marketplace backend to process the purchase.
+            4. Returns the details of the transaction if the purchase is successful.
+            Note: this method requires a valid bearer token and app ID for authentication.
+            </summary>
+            <param name="offerId">The ID of the offer to be bought.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>The details of the transaction.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the input values are invalid.</exception>
+        </member>
         <member name="T:RGN.Modules.Marketplace.MarketplaceOfferData">
             <summary>
             Represents a Marketplace Offer in the Ready Games Network (RGN) with its associated properties.
@@ -27,6 +119,38 @@
         <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.appIds">
             <summary>
             List of application identifiers that are included in this Marketplace Offer.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.inventoryItemIds">
+            <summary>
+            List of inventory items included into this marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.virtualItemIds">
+            <summary>
+            List of virtual items included into this marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.price">
+            <summary>
+            Price of the marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.status">
+            <summary>
+            Status of the marketplace offer. Possible values are:
+            'on_sale' - when the offer is created by the seller and nobody has tried to purchase it yet
+            'pending' - when there is a blockchain transaction pending. Happens when the offer is purchased
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.tags">
+            <summary>
+            List of the tags for the marketplace offer
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.ownerId">
+            <summary>
+            User identifier of the creator of this marketplace offer. The user who tries to sell the inventory items
             </summary>
         </member>
         <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.createdAt">
@@ -55,14 +179,114 @@
             Identifier for the user who last updated the Marketplace Offer.
             </summary>
         </member>
-        <member name="T:RGN.Modules.Marketplace.GetGamePassUserDataResponseData">
+        <member name="T:RGN.Modules.Marketplace.MarketplaceTransactionData">
             <summary>
-            Represents the response data received when requesting Game Pass user data.
+            Represents a Marketplace Transaction in the Ready Games Network (RGN) with its associated properties.
             </summary>
         </member>
-        <member name="T:RGN.Modules.Marketplac.GetForCurrentAppResponseData">
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.id">
             <summary>
-            Represents the response data received when requesting Game Pass data for the current application.
+            Unique identifier for the Marketplace Transaction.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.buyerId">
+            <summary>
+            Unique identifier for the buyer in the transaction.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.sellerId">
+            <summary>
+            Unique identifier for the seller in the transaction.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.offerId">
+            <summary>
+            Unique identifier for the offer associated with the transaction.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.deductedCurrencies">
+            <summary>
+            The deducted currencies of the transaction.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.status">
+            <summary>
+            Status of the transaction. Possible values are:
+            'pending' - when the transaction is initiated but not yet confirmed.
+            'confirmed' - when the transaction is successfully completed.
+            'failed' - when the transaction has failed.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.createdAt">
+            <summary>
+            The UNIX timestamp representing when the transaction was created.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            This field is automatically populated by the backend.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.createdBy">
+            <summary>
+            Identifier for the user who created the transaction.
+            This field is automatically populated by the backend.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.updatedAt">
+            <summary>
+            The UNIX timestamp representing when the transaction was last updated.
+            in milliseconds since midnight, January 1, 1970 UTC.
+            This field is automatically populated by the backend.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.MarketplaceTransactionData.updatedBy">
+            <summary>
+            Identifier for the user who last updated the transaction.
+            This field is automatically populated by the backend.
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.Marketplace.GetOfferResponseData">
+            <summary>
+            Represents the response data for the GetOfferAsync
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOfferResponseData.offer">
+            <summary>
+            The marketplace offer data
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOfferResponseData.inventoryItems">
+            <summary>
+            Inventory items from the offers
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOfferResponseData.virtualItems">
+            <summary>
+            Virtual items that are referenced by the inventory items
+            </summary>
+        </member>
+        <member name="T:RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate">
+            <summary>
+            Callback used in the call to open the markeplace web view
+            </summary>
+            <param name="success"></param>
+        </member>
+        <member name="T:RGN.Modules.Marketplac.GetOffersResponseData">
+            <summary>
+            Represents the response data for the GetOffersAsync
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.offers">
+            <summary>
+            The marketplace offer data
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.inventoryItems">
+            <summary>
+            Inventory items from the offers
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.virtualItems">
+            <summary>
+            Virtual items that are referenced by the inventory items
             </summary>
         </member>
     </members>
