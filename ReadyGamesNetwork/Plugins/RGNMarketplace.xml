@@ -131,9 +131,9 @@
             List of virtual items included into this marketplace offer
             </summary>
         </member>
-        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.price">
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.prices">
             <summary>
-            Price of the marketplace offer
+            Prices of the marketplace offer
             </summary>
         </member>
         <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.status">
