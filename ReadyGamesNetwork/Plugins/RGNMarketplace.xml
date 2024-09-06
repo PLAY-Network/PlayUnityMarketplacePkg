@@ -263,31 +263,31 @@
             Virtual items that are referenced by the inventory items
             </summary>
         </member>
+        <member name="T:RGN.Modules.Marketplace.GetOffersResponseData">
+            <summary>
+            Represents the response data for the GetOffersAsync
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOffersResponseData.offers">
+            <summary>
+            The marketplace offer data
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOffersResponseData.inventoryItems">
+            <summary>
+            Inventory items from the offers
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOffersResponseData.virtualItems">
+            <summary>
+            Virtual items that are referenced by the inventory items
+            </summary>
+        </member>
         <member name="T:RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate">
             <summary>
             Callback used in the call to open the markeplace web view
             </summary>
             <param name="success"></param>
-        </member>
-        <member name="T:RGN.Modules.Marketplac.GetOffersResponseData">
-            <summary>
-            Represents the response data for the GetOffersAsync
-            </summary>
-        </member>
-        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.offers">
-            <summary>
-            The marketplace offer data
-            </summary>
-        </member>
-        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.inventoryItems">
-            <summary>
-            Inventory items from the offers
-            </summary>
-        </member>
-        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.virtualItems">
-            <summary>
-            Virtual items that are referenced by the inventory items
-            </summary>
         </member>
     </members>
 </doc>
