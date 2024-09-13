@@ -9,7 +9,7 @@
             This module is responsible for markeplace functionality.
             </summary>
         </member>
-        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.OpenMarketpace(System.String,RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate)">
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.OpenMarketplace(System.String,RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate)">
             <summary>
             Opens the marketplace web page
             </summary>
@@ -131,9 +131,9 @@
             List of virtual items included into this marketplace offer
             </summary>
         </member>
-        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.price">
+        <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.prices">
             <summary>
-            Price of the marketplace offer
+            Prices of the marketplace offer
             </summary>
         </member>
         <member name="F:RGN.Modules.Marketplace.MarketplaceOfferData.status">
@@ -263,31 +263,31 @@
             Virtual items that are referenced by the inventory items
             </summary>
         </member>
+        <member name="T:RGN.Modules.Marketplace.GetOffersResponseData">
+            <summary>
+            Represents the response data for the GetOffersAsync
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOffersResponseData.offers">
+            <summary>
+            The marketplace offer data
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOffersResponseData.inventoryItems">
+            <summary>
+            Inventory items from the offers
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.Marketplace.GetOffersResponseData.virtualItems">
+            <summary>
+            Virtual items that are referenced by the inventory items
+            </summary>
+        </member>
         <member name="T:RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate">
             <summary>
             Callback used in the call to open the markeplace web view
             </summary>
             <param name="success"></param>
-        </member>
-        <member name="T:RGN.Modules.Marketplac.GetOffersResponseData">
-            <summary>
-            Represents the response data for the GetOffersAsync
-            </summary>
-        </member>
-        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.offers">
-            <summary>
-            The marketplace offer data
-            </summary>
-        </member>
-        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.inventoryItems">
-            <summary>
-            Inventory items from the offers
-            </summary>
-        </member>
-        <member name="F:RGN.Modules.Marketplac.GetOffersResponseData.virtualItems">
-            <summary>
-            Virtual items that are referenced by the inventory items
-            </summary>
         </member>
     </members>
 </doc>
