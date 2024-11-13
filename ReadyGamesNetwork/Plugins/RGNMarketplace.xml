@@ -9,7 +9,7 @@
             This module is responsible for markeplace functionality.
             </summary>
         </member>
-        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.OpenMarketplace(System.String,RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate)">
+        <member name="M:RGN.Modules.Marketplace.MarketplaceModule.OpenMarketplace(System.String,System.String,RGN.Modules.Wallets.MarketplaceOpenCallbackDelegate)">
             <summary>
             Opens the marketplace web page
             </summary>
