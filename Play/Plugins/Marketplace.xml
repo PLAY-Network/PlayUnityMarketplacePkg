@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>RGNMarketplace</name>
+        <name>Marketplace</name>
     </assembly>
     <members>
         <member name="T:RGN.Modules.Marketplace.MarketplaceModule">

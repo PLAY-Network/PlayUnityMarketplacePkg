@@ -1,5 +1,5 @@
 ﻿{
-  "name": "io.getready.rgn.marketplace",
+  "name": "io.play.unity.marketplace",
   "displayName": "PLAY SDK. Marketplace",
   "version": "0.16.0",
   "unity": "2020.3",
@@ -30,6 +30,6 @@
   ],
   "samples": [],
   "dependencies": {
-    "io.getready.rgn.core": "0.16.0"
+    "io.play.unity.core": "0.16.0"
   }
 }
