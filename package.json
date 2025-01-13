@@ -1,5 +1,5 @@
 ﻿{
-  "name": "io.play.unity.marketplace",
+  "name": "network.theplay.unity.marketplace",
   "displayName": "PLAY SDK. Marketplace",
   "version": "0.16.0",
   "unity": "2020.3",
@@ -30,6 +30,6 @@
   ],
   "samples": [],
   "dependencies": {
-    "io.play.unity.core": "0.16.0"
+    "network.theplay.unity.core": "0.16.0"
   }
 }
